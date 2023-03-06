@@ -16,4 +16,4 @@ The given Java code builds an inverted index from a set of input files and allow
 'intersect' method takes two 'HashSet' objects representing two posting lists and returns their intersection.
 Note that the code does not perform any text preprocessing, such as stemming or stop word removal, which are common steps in building an inverted index for information retrieval. It also assumes that the input files are text files and not binary files.
 
-## For More info (https://www.educative.io/answers/what-is-an-inverted-index)
+### For More info (https://www.educative.io/answers/what-is-an-inverted-index)
