@@ -7,7 +7,7 @@ find documents that contain specific words or phrases - Information Retrieval
 
 The given Java code builds an inverted index from a set of input files and allows querying the index to find documents that contain specific words or phrases. Here is a high-level explanation of the code:
 
-'DictEntry3' is a class that stores information about a term in the index, including the number of documents that contain the term (doc_freq), the total number of occurrences of the term across all documents (term_freq), and a HashSet of document IDs (postingList) where the term appears.
+DictEntry3 is a class that stores information about a term in the index, including the number of documents that contain the term (doc_freq), the total number of occurrences of the term across all documents (term_freq), and a HashSet of document IDs (postingList) where the term appears.
 Index3 is the main class that builds and queries the inverted index. It has two member variables:
 sources: a map that stores the file name for each document in the index.
 index: a hash map that stores the DictEntry3 object for each term in the index.
