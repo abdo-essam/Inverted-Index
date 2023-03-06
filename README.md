@@ -4,7 +4,6 @@ find documents that contain specific words or phrases - Information Retrieval
 # Faculty Of Computer And Artificial Intelligence Cairo University `FCAI-CU`
 
 ## Information Retrieval Assignment
-![afdf](https://github.com/abdo-essam/Elliptic-Curves/blob/main/elliptic-curve-cryptography-diagram.png?raw=true)
 
 The given Java code builds an inverted index from a set of input files and allows querying the index to find documents that contain specific words or phrases. Here is a high-level explanation of the code:
 
