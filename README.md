@@ -25,8 +25,7 @@ The Index3 class has several methods:
 - buildIndex: builds the inverted index from a set of files. It loops through each file, reads it line by line, splits each line into words, and updates the inverted index accordingly. It also adds the document ID and file name to the sources map.
 
 - printDictionary: prints the inverted index. It loops through each entry in the index map and prints the term, doc_freq, term_freq, and posting list.
-
--find: finds documents that contain a set of query terms. It takes a string of query terms as an argument, splits it into words, and intersects the posting lists of          each term to find the documents that contain all the query terms. It then returns the file names of these documents.
+- find: finds documents that contain a set of query terms. It takes a string of query terms as an argument, splits it into words, and intersects the posting lists of          each term to find the documents that contain all the query terms. It then returns the file names of these documents.
 
 - intersect: computes the intersection of two posting lists.
 
