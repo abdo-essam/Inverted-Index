@@ -5,15 +5,29 @@ find documents that contain specific words or phrases - Information Retrieval
 
 ## Information Retrieval Assignment
 
-The given Java code builds an inverted index from a set of input files and allows querying the index to find documents that contain specific words or phrases. Here is a high-level explanation of the code:
+This code implements an inverted index to support text search. The inverted index is built from a set of documents, where each document is represented by a unique integer ID. The code defines two classes: DictEntry3 and Index3.
 
-'DictEntry3' is a class that stores information about a term in the index, including the number of documents that contain the term ('doc_freq'), the total number of occurrences of the term across all documents ('term_freq'), and a 'HashSet' of document IDs ('postingList') where the term appears.
-'Index3' is the main class that builds and queries the inverted index. It has two member variables:
-'sources': a map that stores the file name for each document in the index.
-'index': a hash map that stores the 'DictEntry3' object for each term in the index.
-'buildIndex' method takes an array of file names and builds the inverted index by iterating through each file and its lines, tokenizing each line into words, and updating the 'DictEntry3' objects in 'index' accordingly. For each word encountered in the file, the method checks whether it exists in the 'index' hash map. If not, it adds a new 'DictEntry3' object for the word. It then increments the 'doc_freq' count of the 'DictEntry3' object and adds the current document ID to its 'postingList'. Finally, it increments the 'term_freq' count of the 'DictEntry3' object. After processing all the files, the method prints the size of the dictionary.
-'find' method takes a string of terms as input and returns the file names that contain all the terms. It first tokenizes the input string into words and gets the posting list of the first word (converted to lowercase) from 'index'. It then iteratively intersects this posting list with the posting lists of the other words in the input string. The final result is the list of file names associated with the document IDs in the intersection. If there is no intersection, the method returns an empty string.
-'intersect' method takes two 'HashSet' objects representing two posting lists and returns their intersection.
-Note that the code does not perform any text preprocessing, such as stemming or stop word removal, which are common steps in building an inverted index for information retrieval. It also assumes that the input files are text files and not binary files.
+DictEntry3 defines an entry in the inverted index. It has three fields:
+
+-- doc_freq: the number of documents that contain the term.
+-- term_freq: the number of times the term is mentioned in the collection.
+-- postingList: a set of document IDs where the term occurs.
+
+
+Index3 defines the inverted index. It has two fields:
+
+-- sources: a map from document ID to the file name.
+-- index: the inverted index, which is a map from terms to DictEntry3 objects.
+
+
+The Index3 class has several methods:
+
+-- buildIndex: builds the inverted index from a set of files. It loops through each file, reads it line by line, splits each line into words, and updates the inverted index accordingly. It also adds the document ID and file name to the sources map.
+-- printDictionary: prints the inverted index. It loops through each entry in the index map and prints the term, doc_freq, term_freq, and posting list.
+--find: finds documents that contain a set of query terms. It takes a string of query terms as an argument, splits it into words, and intersects the posting lists of each term to find the documents that contain all the query terms. It then returns the file names of these documents.
+-- intersect: computes the intersection of two posting lists.
+-- union: computes the union of two posting lists.
+
+Overall, this code provides a basic implementation of an inverted index and supports simple text search. However, it has some limitations, such as not handling stop words, stemming, or phrase queries. Additionally, it does not have any relevance ranking or scoring mechanism.
 
 ### For More info (https://www.educative.io/answers/what-is-an-inverted-index)
