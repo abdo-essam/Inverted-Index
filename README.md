@@ -14,10 +14,14 @@ DictEntry3 defines an entry in the inverted index. It has three fields:
 - postingList: a set of document IDs where the term occurs.
 
 
+
+
 Index3 defines the inverted index. It has two fields:
 
 - sources: a map from document ID to the file name.
 - index: the inverted index, which is a map from terms to DictEntry3 objects.
+
+
 
 
 The Index3 class has several methods:
@@ -30,6 +34,8 @@ The Index3 class has several methods:
 - intersect: computes the intersection of two posting lists.
 
 - union: computes the union of two posting lists.
+
+
 
 Overall, this code provides a basic implementation of an inverted index and supports simple text search. However, it has some limitations, such as not handling stop words, stemming, or phrase queries. Additionally, it does not have any relevance ranking or scoring mechanism.
 
