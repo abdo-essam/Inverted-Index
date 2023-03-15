@@ -9,7 +9,7 @@ This code implements an inverted index to support text search. The inverted inde
 
 DictEntry3 defines an entry in the inverted index. It has three fields:
 
--- doc_freq: the number of documents that contain the term.
+- doc_freq: the number of documents that contain the term.
 -- term_freq: the number of times the term is mentioned in the collection.
 -- postingList: a set of document IDs where the term occurs.
 
