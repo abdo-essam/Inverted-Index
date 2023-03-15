@@ -1,22 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pkg322.pkg2022;
 
-/**
- *
- * @author ehab
- */
-/*
- * InvertedIndex - Given a set of text files, implement a program to create an 
- * inverted index. Also create a user interface to do a search using that inverted 
- * index which returns a list of files that contain the query term / terms.
- * The search index can be in memory. 
- * 
-
- */
 import java.io.*;
 import java.util.*;
 
