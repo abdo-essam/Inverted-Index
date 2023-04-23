@@ -5,7 +5,7 @@ find documents that contain specific words or phrases - Information Retrieval
 
 ## Information Retrieval Assignment
 
-This code implements an inverted index to support text search. The inverted index is built from a set of documents, where each document is represented by a unique integer ID. The code defines two classes: DictEntry3 and Index3.
+The code defines two classes: DictEntry3 and Index3.
 
 DictEntry3 defines an entry in the inverted index. It has three fields:
 
